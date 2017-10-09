@@ -13,5 +13,5 @@
 - Some kind of ML may need to be employed to group things by their topics, because it's really hard to programmatically know that an article about apples and another about oranges should go a folder called "Fruit". Really unsure about a good approach for this.
 
 *Presentation*
-- Could turn into a python module or even a package
+- Could turn into a python module or even a package if it gets complicated.
 - Test on my own bookmarks, or some giant list of URLs and see how it turns out.
