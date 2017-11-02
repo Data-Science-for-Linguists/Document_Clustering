@@ -1,17 +1,21 @@
 ### Project Ideas:
 
-#### 1. Scraping bookmarks from Chrome, automatically group bookmarks into folders and subfolders with topic modeling. In a more general sense, this will group a list of URLs into topics and subtopics.
+#### Document Clustering
 
 *Data*:
-- A list of URLs to articles
-- Each page will need to be cleaned from the page source code into a nice block of text (HTML parser libraries exist, but inline javascript will need to be handled somehow). 
+- A corpus of wikipedia articles and potentially other corpora (but wikipedia is massive and very good for topic modeling).
+- I'm no longer web scraping. Instead, I've downloaded a dump of wikipedia (very large) that I'm storing locally.
+- A sample of a few pages of the dump in JSON format will be included in the `data/` folder.
 
 *Analysis*:
-- Using a list of URLs, it's possible to extract some interesting linguistic insights to understand what the user is interested in. 
-- Gensim for topic modeling, keras/sci-kit for any ML. 
-- Can generate a summary about each article/URL about sentence length, TTR, and stuff as well as an actual summary of maybe 3-4 important sentences extracted from the article (textrank?).
-- Some kind of ML may need to be employed to group things by their topics, because it's really hard to programmatically know that an article about apples and another about oranges should go a folder called "Fruit". Really unsure about a good approach for this.
+- Visualization with t-SNE and some kind of interesting graphical representation
+- Document clustering using Kullback-Leibler divergence is the plan.
+- Instead of reclustering on the introduction of a new input, I can turn it into classification?
+  - Or maybe have both as options
+- End goal is a python package to cluster input text documents and visualize the result.
+- Will try to implement some things myself (for learning purposes).
+- Maybe I can improve the clusters after the original clustering using reinforcement learning with user input.
+- Can compare to other document clustering algorithms
 
 *Presentation*
-- Could turn into a python module or even a package if it gets complicated.
-- Test on my own bookmarks, or some giant list of URLs and see how it turns out.
+- Jupyter notebooks for a majority of the code, writeups will be in markdown/latex 
