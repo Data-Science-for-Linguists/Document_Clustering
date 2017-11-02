@@ -3,6 +3,7 @@
 
 ## 11/01/2017
 Downloaded and unzipped a wikipedia dump from August 20, found a convenient python script to extract into JSON format.
+Two separate methods now: document clustering + cluster labeling. Given a group of "similar" documents, I'll need to generate some kind of label.
 
 ## 10/29/2017
 I've decided to use a wikipedia corpus for now, specifically [this one](http://www.cs.upc.edu/~nlp/wikicorpus/).
