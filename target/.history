@@ -1,0 +1,5 @@
+:help
+help
+println("Hello world")
+q
+exit
