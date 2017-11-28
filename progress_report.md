@@ -1,6 +1,9 @@
 # Term Project Progress Log
 
 
+## 11/11/2017
+`clustering.ipynb` contains code to visualize clusters and to 
+
 ## 11/01/2017
 Downloaded and unzipped a wikipedia dump from August 20, found a convenient python script to extract into JSON format once combined with some of my own code.
 Two separate methods now: document clustering + cluster labeling. Given a group of "similar" documents, I'll need to generate some kind of label.
