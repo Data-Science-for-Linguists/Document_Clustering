@@ -2,3 +2,6 @@ requests
 bs4
 gensim
 wikipedia
+spacy
+pandas
+numpy

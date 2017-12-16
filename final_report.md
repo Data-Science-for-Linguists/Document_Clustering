@@ -49,4 +49,5 @@ The main algorithm consists of two repeated steps.
 3. Repeat steps 1 and 2 until there are no longer any changes in the centroids.
 
 Below is a graphic from [this page](http://www.learnbymarketing.com/methods/k-means-clustering/) that shows K-means in action.
+
 ![png](img/k-means-steps-example.png)

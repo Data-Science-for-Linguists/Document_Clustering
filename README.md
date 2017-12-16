@@ -14,7 +14,7 @@ This would entail:
 For this project, I decided to focus on clustering and labeling. K-means and Hierarchical methods were investigated.
 
 ## Dataset
-For this project, I utilized a 12GB text dump of wikipedia found [here](https://dumps.wikimedia.org/backup-index.html). Since the clustering is unsupervised, it isn't necessary to run the algorithms on the entire dataset, though I eventually will do so. In the [data](data) folder are a small sample of JSON files of wikipedia articles.
+For this project, I utilized a 12GB text dump of wikipedia found [here](https://dumps.wikimedia.org/). Since the clustering is unsupervised, it isn't necessary to run the algorithms on the entire dataset, though I eventually will do so. In the [data](data) folder are a small sample of JSON files of wikipedia articles.
 
 
 
@@ -33,11 +33,11 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
 - [Images](img), folder of all images used in repository
 - [Cluster Pickle Files](clusters), saved `.pkl` files of clustering outputs
 - Preprocessing
-  - [Wikiextractor](wikiextractor), a submodule of the repo used in converting wikipedia XML dump to json
+  - [Wikiextractor](https://github.com/attardi/wikiextractor/), a submodule of the repo used in converting wikipedia XML dump to json
   - [Reformatting script](reformat.py), a short custom script for some further preprocessing to convert from JSON Lines format into one dict per file.
 - License
   - [GPL License](LICENSE.md)
   - [License Explanation](LICENSE_notes.md)
 
-  
+
 NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`.
