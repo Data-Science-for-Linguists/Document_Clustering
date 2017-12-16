@@ -5,7 +5,7 @@ This notebook runs K-Means clustering on my data.
 
 ### Table of Contents
 - [Loading Data](#loading-data)
-- [Vectorizing](#tfidf-vectors) is where I fix X, Y and Z
+- [Vectorizing](#tf-idf-vectors) is where I fix X, Y and Z
 - [K-Means](#k-means) is where I convert A to B
 - [t-SNE visualization](#t-sne) rounds up with some observations
 - [Results](#results)
