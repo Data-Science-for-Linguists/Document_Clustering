@@ -101,7 +101,7 @@ Trimming down the lower-level clusters:
 
 ![png](img/hierarchical_trimmed.png)
 
-In slides 26-28 of [my presentation](ling1340_slides.pdf), it is clear that this clustering algorithm produced a far more suitable result.
+I take a closer look at the clusters in slides 26-28 of [my presentation](ling1340_slides.pdf) and it is clear that this clustering algorithm produced a far more suitable result.
 ### Hierarchical Labeling
 At the time of writing this report, I was unable to produce hierarchical labels. The SciPy linkage matrix API documentation did not provide much information on how to extract each cluster and I was unable to find any guidance online.
 
