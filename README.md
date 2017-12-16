@@ -1,4 +1,6 @@
 # Automatic Bookmark Organizing with Document Clustering.
+Daniel Zheng, [daniel.zheng@pitt.edu](mailto:daniel.zheng@pitt.edu)
+
 Originally, I wanted to create a way to automatically clean up my bookmarks bar. I have hundreds, maybe thousands of bookmarks floating around not sorted into their proper folders.
 
 I then thought, it would be cool to make a Chrome extension that takes list of bookmarks
