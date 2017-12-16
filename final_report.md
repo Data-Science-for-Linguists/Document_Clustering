@@ -9,10 +9,8 @@ Daniel Zheng, [daniel.zheng@pitt.edu](mailto:daniel.zheng@pitt.edu)
   - [K-means](#k-means)
     - [Labeling](#k-means-labeling)
   - [Hierarchical](#hierarchical)
-    - Labeling
-- Discussion
-- Future Work
-- References
+    - [Labeling](#hierarchical-labeling)
+- [Discussion](#discussion)
 
 ## Introduction
 This project began when I realized that my browser's bookmarks bar was a mess and desired a way to automatically clean it up. Whenever I come across an interesting webpage, I immediately bookmark it. However, over the years, I've stopped properly organizing these bookmarks and placing them into appropriate folders, instead leaving them just as links, not even contained in a single folder. At the far right of my bookmarks bar is a `>>` icon, which expands into a horrifyingly long list of hundreds of URLs when clicked. Undoubtedly, many, if not all of these links contain interesting and useful information, but they are so disorganized that it is essentially impossible for me to ever find what I'm looking for.
@@ -102,4 +100,9 @@ The following output was produced:
 Trimming down the lower-level clusters:
 
 ![png](img/hierarchical_trimmed.png)
-###
+
+In slides 26-28 of [my presentation](ling1340_slides.pdf), it is clear that this clustering algorithm produced a far more suitable result.
+### Hierarchical Labeling
+At the time of writing this report, I was unable to produce hierarchical labels. The SciPy linkage matrix API documentation did not provide much information on how to extract each cluster and I was unable to find any guidance online.
+
+## Discussion
