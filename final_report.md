@@ -7,7 +7,7 @@ Daniel Zheng, [daniel.zheng@pitt.edu](mailto:daniel.zheng@pitt.edu)
   - [Preprocessing](#preprocessing)
 - [Clustering](#clustering)
   - [K-means](#k-means)
-    - [Labeling](#labeling)
+    - [Labeling](#k-means-labeling)
   - Agglomerative
     - Labeling
 - Discussion
@@ -51,3 +51,11 @@ The main algorithm consists of two repeated steps.
 Below is a graphic from [this page](http://www.learnbymarketing.com/methods/k-means-clustering/) that shows K-means in action.
 
 ![png](img/k-means-steps-example.png)
+
+I ran K-means on a small sample of articles with subjects beginning with the letter __A__. I first used [tf-idf](http://www.tfidf.com/) to produce vector representations of each article's text that would be representative of their content. Since tf-idf produces sparse vectors, they were converted to dense vectors using Truncated Singular Value Decomposition to speed up the K-means algorithm. After K-means was run, the resulting clusters were fed into [t-SNE](https://lvdmaaten.github.io/tsne/), an embedding algorithm that maps high-dimensional feature space data to 2D while grouping similar data closer together.
+
+The following output was produced:
+
+![png](img/output_12_0.png)
+
+### K-means Labeling
