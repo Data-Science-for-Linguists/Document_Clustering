@@ -78,6 +78,10 @@ To find overlap between many (potentially disparate) documents, I devised a simp
 | 8       | example, Arabic, ASL, APL, the language                             |
 | 9       | Amasis, Egypt, Herodotus, Cambyses, Apries                          |
 
+t-SNE with a legend produced with the computed label assignments:
+
+![png](img/output_20_0.png)
+
 I have so far been unable to come up with a method to generate a single label for each cluster that is a phrase representative of the contents of the cluster. This is partly because k-means is not the most effective algorithm for this problem.
 
 ## Hierarchical
