@@ -8,7 +8,7 @@ Daniel Zheng, [daniel.zheng@pitt.edu](mailto:daniel.zheng@pitt.edu)
 - [Clustering](#clustering)
   - [K-means](#k-means)
     - [Labeling](#k-means-labeling)
-  - Agglomerative
+  - [Hierarchical](#hierarchical)
     - Labeling
 - Discussion
 - Future Work
@@ -61,7 +61,7 @@ The following output was produced:
 ### K-means Labeling
 While the clustering output is neat, and there are some noticeably distinct clusters, it's important to keep in mind that the original purpose was to place bookmarks into *properly labeled* folders. Generating cluster labels proved to be extremely challenging.
 
-#### Topic Modelling
+#### Topic Modeling
 Initially, I attempted to use `gensim` to extract the top few topics within each article, then use these to find the top topics describing each cluster. This was very slow and also didn't work very well. Out of clusters of hundreds of articles, the top topics would occur maybe five to ten times. I realized that since K-means only does a single layer of clustering, it's likely that articles in the same cluster can be about very different topics. However, being in the same cluster indicates that they have *something* in common, even if isn't their main topics.
 
 To find overlap between many (potentially disparate) documents, I devised a simpler method using `spacy`. The provided `noun_chunks` function was an excellent way to extract noun phrases from each document. After removing phrases that were considered stopwords, I took the top few most common phrases and used those as labels. For *k=10*, the following labels were generated. For a more in-depth look at the contents of the clusters, see my slides [here](ling1340_slides.pdf).
@@ -79,3 +79,27 @@ To find overlap between many (potentially disparate) documents, I devised a simp
 | 7       | the city, Amsterdam, Athens, Athena, Aarhus                         |
 | 8       | example, Arabic, ASL, APL, the language                             |
 | 9       | Amasis, Egypt, Herodotus, Cambyses, Apries                          |
+
+I have so far been unable to come up with a method to generate a single label for each cluster that is a phrase representative of the contents of the cluster. This is partly because k-means is not the most effective algorithm for this problem.
+
+## Hierarchical
+The hierarchical method I investigated was aggolmerative clustering. While K-means requires a parameter *k* and initial centroids, agglomerative clustering just requires some distance metric.
+
+I chose to use cosine similarity, a better metric than Euclidean distance because it finds the cosine of the angle between the text vectors, a good way to measure semantic distance. Euclidean distance is also more expensive to calculate in high dimensions.
+
+The agglomerative clustering algorithm builds a binary tree. It works as follow:
+1. Place each data point in its own group
+2. Repeatedly merge two closest groups until everything is in a
+single cluster
+
+I ran the hierarchical clustering algorithm on the same sample of articles with subjects beginning with the letter __A__. I first used [tf-idf](http://www.tfidf.com/) to produce vector representations of each article's text that would be representative of their content. A distance matrix using cosine similarity was produced and passed to the clustering algorithm.
+The SciPy dendrogram visualization was used to view results.
+
+The following output was produced:
+
+![png](img/hierarchical.png)
+
+Trimming down the lower-level clusters:
+
+![png](img/hierarchical_trimmed.png)
+###
