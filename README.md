@@ -35,5 +35,7 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
 - Preprocessing
   - [Wikiextractor](wikiextractor), a submodule of the repo used in converting wikipedia XML dump to json
   - [Reformatting script](reformat.py), a short custom script for some further preprocessing to convert from JSON Lines format into one dict per file.
-
+- License
+  - [GPL License](LICENSE.md)
+  - [License Explanation](LICENSE_notes.md)
 NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`.
