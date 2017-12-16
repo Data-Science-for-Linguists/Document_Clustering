@@ -59,4 +59,4 @@ The following output was produced:
 ![png](img/output_12_0.png)
 
 ### K-means Labeling
-While the clustering output is great, and there are some noticeably distinct clusters, it's important to keep in mind that the original purpose was to place bookmarks into *properly labeled* folders. it isn't very useful unless
+While the clustering output is great, and there are some noticeably distinct clusters, it's important to keep in mind that the original purpose was to place bookmarks into *properly labeled* folders. Generating cluster labels proved to be extremely challenging.
