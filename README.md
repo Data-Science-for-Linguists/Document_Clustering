@@ -34,6 +34,6 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
 - [Cluster Pickle Files](clusters), saved `.pkl` files of clustering outputs
 - Preprocessing
   - [Wikiextractor](wikiextractor), a submodule of the repo used in converting wikipedia XML dump to json
-  - [Reformatting Script](reformat.py), a short custom script for some further preprocessing to convert from JSON Lines format into one dict per file.
+  - [Reformatting script](reformat.py), a short custom script for some further preprocessing to convert from JSON Lines format into one dict per file.
 
 NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`.
