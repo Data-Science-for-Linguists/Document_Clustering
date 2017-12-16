@@ -9,8 +9,7 @@ This would entail:
 - Hierarchical clustering
 - Cluster labeling (folder names)
 
-For this project, I decided to investigate clustering and labeling.
-A brief description of your project
+For this project, I decided to focus on clustering and labeling. K-means and Hierarchical methods were investigated.
 
 ## Dataset
 For this project, I utilized a 12GB text dump of wikipedia found [here](https://dumps.wikimedia.org/backup-index.html). Since the clustering is unsupervised, it isn't necessary to run the algorithms on the entire dataset, though I eventually will do so. In the [data](data) folder are a small sample of JSON files of wikipedia articles.
@@ -33,4 +32,4 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
   - [Wikiextractor](wikiextractor), a submodule of the repo used in converting wikipedia XML dump to json
   - [Reformatting Script](reformat.py), a short custom script for some further preprocessing to convert from JSON Lines format into one dict per file.
 
-NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`. 
+NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`.
