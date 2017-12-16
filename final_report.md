@@ -1,13 +1,13 @@
 Daniel Zheng, [daniel.zheng@pitt.edu](mailto:daniel.zheng@pitt.edu)
 # Automatic Bookmark Organizing with Document Clustering
 ### Table of Contents
-- [Introduction](#Introduction)
-- [Data](#Data)
-  - [License](#License)
-  - [Preprocessing](#Preprocessing)
-- [Clustering](#Clustering)
-  - [K-means](#K-means)
-    - [Labeling](#Labeling)
+- [Introduction](#introduction)
+- [Data](#data)
+  - [License](#license)
+  - [Preprocessing](#preprocessing)
+- [Clustering](#clustering)
+  - [K-means](#k-means)
+    - [Labeling](#labeling)
   - Agglomerative
     - Labeling
 - Discussion
