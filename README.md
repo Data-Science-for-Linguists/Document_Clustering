@@ -19,6 +19,7 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
 ### Repository Contents
 - [Practicing topic extraction](project_old.ipynb)
 - [Visitor log](https://github.com/Data-Science-for-Linguists/Shared-Repo/blob/master/todo10_visitors_log/visitors_log_dan.md)
+- [Final Report](final_report.md)
 - K-means Clustering and Visualization
   - [Jupyter Notebook](clustering.ipynb)
   - [Markdown](clustering.md)
@@ -26,7 +27,8 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
   - [Jupyter Notebook](hierarchical.ipynb)
   - [Markdown](hierarchical.md)
 - [Class Presentation Slides](ling1340_slides.pdf)
-- [Data Folder](data), JSON files of wikipedia articles
+- [Data](data), JSON files of wikipedia articles
+- [Images](img), folder of all images used in repository
 - [Cluster Pickle Files](clusters), saved `.pkl` files of clustering outputs
 - Preprocessing
   - [Wikiextractor](wikiextractor), a submodule of the repo used in converting wikipedia XML dump to json
