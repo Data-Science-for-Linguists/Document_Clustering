@@ -47,3 +47,6 @@ The main algorithm consists of two repeated steps.
 1. For each point, calculate the Euclidean distance in the feature space to each centroid, assigning it to the closest one.
 2. Recalculate the centroids to be the averages of the points in each current cluster.
 3. Repeat steps 1 and 2 until there are no longer any changes in the centroids.
+
+Below is a graphic from [this page](http://www.learnbymarketing.com/methods/k-means-clustering/) that shows K-means in action.
+![png](img/k-means-steps-example.png)
