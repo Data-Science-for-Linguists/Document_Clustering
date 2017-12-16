@@ -31,10 +31,7 @@ for x in glob.glob('data/wiki*.json'):
 wiki_articles[0].keys()
 ```
 
-
-
-
-    dict_keys(['id', 'text', 'url', 'title'])
+dict_keys(['id', 'text', 'url', 'title'])
 
 
 
@@ -195,7 +192,6 @@ import pandas as pd
 articles = {'titles': wiki_articles_titles, 'text': wiki_articles_text, 'cluster':clusters}
 wiki_df = pd.DataFrame(articles, index=[clusters] , columns = ['titles', 'text', 'cluster'])
 wiki_df.head()
-
 ```
 
 
