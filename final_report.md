@@ -59,4 +59,23 @@ The following output was produced:
 ![png](img/output_12_0.png)
 
 ### K-means Labeling
-While the clustering output is great, and there are some noticeably distinct clusters, it's important to keep in mind that the original purpose was to place bookmarks into *properly labeled* folders. Generating cluster labels proved to be extremely challenging.
+While the clustering output is neat, and there are some noticeably distinct clusters, it's important to keep in mind that the original purpose was to place bookmarks into *properly labeled* folders. Generating cluster labels proved to be extremely challenging.
+
+#### Topic Modelling
+Initially, I attempted to use `gensim` to extract the top few topics within each article, then use these to find the top topics describing each cluster. This was very slow and also didn't work very well. Out of clusters of hundreds of articles, the top topics would occur maybe five to ten times. I realized that since K-means only does a single layer of clustering, it's likely that articles in the same cluster can be about very different topics. However, being in the same cluster indicates that they have *something* in common, even if isn't their main topics.
+
+To find overlap between many (potentially disparate) documents, I devised a simpler method using `spacy`. The provided `noun_chunks` function was an excellent way to extract noun phrases from each document. After removing phrases that were considered stopwords, I took the top few most common phrases and used those as labels. For *k=10*, the following labels were generated. For a more in-depth look at the contents of the clusters, see my slides [here](ling1340_slides.pdf).
+
+
+| Cluster | Computed Labels                                                     |
+|---------|---------------------------------------------------------------------|
+| 0       | example, water, acupuncture, autism, Audi                           |
+| 1       | Alexander, Augustus, Rome, Abu Bakr, Agrippina                      |
+| 2       | choice, the axiom, example, the United States, assault              |
+| 3       | August, place, July, the year, the peak                             |
+| 4       | Lincoln, Azerbaijan, Jackson, the country, Apple                    |
+| 5       | April, the month, the Northern Hemisphere, spring, the fourth month |
+| 6       | Apollo, England, Crowley, Aristotle, the time                       |
+| 7       | the city, Amsterdam, Athens, Athena, Aarhus                         |
+| 8       | example, Arabic, ASL, APL, the language                             |
+| 9       | Amasis, Egypt, Herodotus, Cambyses, Apries                          |
