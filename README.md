@@ -38,4 +38,6 @@ For this project, I utilized a 12GB text dump of wikipedia found [here](https://
 - License
   - [GPL License](LICENSE.md)
   - [License Explanation](LICENSE_notes.md)
+
+  
 NOTE: Before running any of this code, I would recommend installing all dependencies with `pip install -r requirements.txt`.
